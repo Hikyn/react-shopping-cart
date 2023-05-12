@@ -17,6 +17,10 @@ div.NavBar a:visited {
     color: inherit;
 }
 
+div.NavBar a:hover {
+    color: orange;
+}
+
 div.NavBar .logo {
     width: 2.5rem;
     height: 2.5rem;

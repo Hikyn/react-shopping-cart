@@ -20,9 +20,13 @@ div.Home a {
 }
 
 div.Home .title {
-    font-family: ;
     font-size: 3rem;
     background-color: black;
+}
+
+div.Home .title:hover::after {
+    position: relative;
+    content: "🪴";
 }
 
 div.Home .subtitle {
@@ -45,4 +49,8 @@ div.Home a {
 
 div.Home a:visited {
     color: inherit;
+}
+
+div.Home a:hover {
+    color: orange;
 }
