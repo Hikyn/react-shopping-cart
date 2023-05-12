@@ -5,17 +5,44 @@ div.Home {
     justify-content: center;
     padding: 1rem;
     height: calc(100vh - var(--NavBarSize));
+    background-image: url('../assets/home.jpg');
+    background-size: cover;
+    background-color: #b83333;
+    color: white;
+}
+
+div.Home .title,
+div.Home .subtitle,
+div.Home .description,
+div.Home a {
+    width: 100vw;
+    text-align: center;
 }
 
 div.Home .title {
+    font-family: ;
     font-size: 3rem;
+    background-color: black;
 }
 
 div.Home .subtitle {
     font-size: 2.5rem;
+    background-color: black;
 }
 
 div.Home .description {
+    padding-top: 1rem;
+    background-color: var(--TransparentBlack);
     font-size: 1.5rem;
     font-style: italic;
+}
+
+div.Home a {
+    background-color: var(--TransparentBlack);
+    padding: 1rem 0rem;
+    font-size: 1.5rem;
+}
+
+div.Home a:visited {
+    color: inherit;
 }

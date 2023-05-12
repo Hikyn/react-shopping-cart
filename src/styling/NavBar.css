@@ -5,7 +5,8 @@ div.NavBar {
     padding: 1rem;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgba(0, 128, 0, 0.336);
+    color: white;
+    background-color: var(--TransparentBlack);
     height: var(--NavBarSize);
     width: 100%;
     font-size: 1.5rem;
