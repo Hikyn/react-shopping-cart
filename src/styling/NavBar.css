@@ -1,0 +1,22 @@
+div.NavBar {
+    display: flex;
+    position: fixed;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 128, 0, 0.336);
+    height: var(--NavBarSize);
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+div.NavBar a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+div.NavBar .logo {
+    width: 2.5rem;
+    height: 2.5rem;
+}

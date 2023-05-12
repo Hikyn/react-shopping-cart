@@ -1,0 +1,21 @@
+div.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: calc(100vh - var(--NavBarSize));
+}
+
+div.Home .title {
+    font-size: 3rem;
+}
+
+div.Home .subtitle {
+    font-size: 2.5rem;
+}
+
+div.Home .description {
+    font-size: 1.5rem;
+    font-style: italic;
+}
