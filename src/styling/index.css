@@ -1,4 +1,9 @@
+html {
+    height: 100vh;
+}
+
 body {
+    height: inherit;
     --NavBarSize: 2.5rem;
     --TransparentBlack: rgba(0, 0, 0, 0.541);
     box-sizing: border-box;
@@ -14,4 +19,9 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+#root {
+    position: relative;
+    height: inherit;
+}
   
