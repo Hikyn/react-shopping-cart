@@ -1,6 +1,15 @@
-div.NavBar {
-    display: flex;
+.homePage div.NavBar {
     position: fixed;
+}
+
+.shopPage div.NavBar {
+    position: sticky;
+
+}
+
+div.NavBar {
+    box-sizing: border-box;
+    display: flex;
     gap: 1rem;
     padding: 1rem;
     justify-content: flex-start;

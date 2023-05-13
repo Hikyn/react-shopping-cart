@@ -4,7 +4,7 @@ html {
 
 body {
     height: inherit;
-    --NavBarSize: 2.5rem;
+    --NavBarSize: 3.5rem;
     --TransparentBlack: rgba(0, 0, 0, 0.541);
     box-sizing: border-box;
     margin: 0;

@@ -1,0 +1,28 @@
+.Card {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 30vh;
+    background-size: cover;
+    background-position: -5vw;
+    
+}
+
+.Card .title {
+    color: white;
+    min-height: 2rem;
+    font-size: 1.2rem;
+    background-color: var(--TransparentBlack);
+}
+
+.Card .price {
+    color: white;
+    background-color: var(--TransparentBlack);
+    text-align: end;
+    height: 2rem;
+    width: 100%;
+    font-size: 1.2rem;
+    align-self: flex-end;
+}

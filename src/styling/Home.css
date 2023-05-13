@@ -14,7 +14,7 @@ div.Home {
 div.Home::before {
     content: "";
     position: absolute;
-    background-image: url('../assets/home.jpg');
+    background-image: url('../images/home.jpg');
     background-size: cover;
     width: 110%;
     height: 110%;
