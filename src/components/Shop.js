@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import { plantFactory } from '../plantFactory';
 import { useEffect, useState } from 'react';
 import Card from './Card';
+import OrderTotal from './OrderTotal';
 
 const Shop = () => {
     const [plantsInCart, setPlantsInCart] = useState({});
@@ -21,22 +22,26 @@ const Shop = () => {
 
     function addPlantToTotal(plant) {
         if (!plantsInCart[plant.name]) {
-            setPlantsInCart({...plantsInCart, [plant.name]: 1 })
+            setPlantsInCart({...plantsInCart, [plant.name]: {count: 1, price: plant.price} })
         } else {
-            const currentCount = plantsInCart[plant.name];
-            setPlantsInCart({...plantsInCart, [plant.name]: currentCount + 1})
+            const currentCount = plantsInCart[plant.name]['count'];
+            setPlantsInCart({...plantsInCart, [plant.name]: {count: currentCount + 1, price: plant.price}})
         }
     }
 
     function decreasePlantFromTotal(plant) {{
-        const currentCount = plantsInCart[plant.name];
-        if (currentCount >= 1) {
+        if (!plantsInCart[plant.name]) {
+            return
+        }
+        const currentCount = plantsInCart[plant.name]['count'];
+        if (currentCount === 1) {
             const copyPlantsInCart = {...plantsInCart}
             delete copyPlantsInCart[plant.name]
             setPlantsInCart({...copyPlantsInCart})
+        } else {
+            setPlantsInCart({...plantsInCart, [plant.name]: {count: currentCount - 1, price: plant.price}})
         }
     }}
-
     
     useEffect(() => {
         console.log(plantsInCart);
@@ -53,6 +58,7 @@ const Shop = () => {
                         decreasePlant={decreasePlantFromTotal}/>)
                 })}
             </div>
+            <OrderTotal plantsInCart={plantsInCart}/>
         </div>
     )
 }
