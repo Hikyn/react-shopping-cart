@@ -6,7 +6,8 @@
     border: 1px solid black;
     height: 30vh;
     background-size: cover;
-    background-position: -5vw;
+    background-repeat: no-repeat;
+    background-position: center;
     box-shadow: -5px 5px 15px black;
 }
 
