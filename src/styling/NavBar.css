@@ -20,6 +20,7 @@ div.NavBar {
     width: 100%;
     font-size: 1.5rem;
     z-index: 1;
+    box-shadow: -5px 5px 15px black;
 }
 
 div.NavBar a:visited {

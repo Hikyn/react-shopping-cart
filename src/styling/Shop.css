@@ -1,6 +1,8 @@
 div.Shop {
     display: grid;
-    grid: 30vh 30vh/ 1fr 1fr;
+    width: 100vw;
+    grid: 30vh 30vh/ 40vw 40vw;
+    justify-content: space-around;
     grid-auto-rows: 30vh;
     gap: 1rem;
     box-sizing: border-box;
@@ -12,6 +14,7 @@ div.Shop .empty {
 }
 
 div.shopPage {
-    background-image: url('../images/home.jpg');
-    background-size: cover;
+    background-image: url('../images/5625776.jpg');
+    background-size: 35vh;
+    background-repeat: 2;
 }
