@@ -27,6 +27,10 @@
     align-self: flex-end;
 }
 
+.Card .flexboxEnd {
+    min-height: 3rem;
+}
+
 .Card .quantity {
     display: flex;
     flex-direction: row;
@@ -35,6 +39,7 @@
 }
 .Card button {
     width: 100%;
+    min-height: 2rem;
 }
 .Card input {
     width: 5rem;
