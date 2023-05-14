@@ -28,7 +28,7 @@ const Card = ({ plant, addPlant, decreasePlant }) => {
 
     return (
         <article className="Card"
-        style={{backgroundImage: `url("/images/${plant.name}.jpg")`}}
+        style={{backgroundImage: `url("http://hikyn.github.io/react-shopping-cart/images/${plant.name}.jpg")`}}
         >
             <h1 className='title'>{plant.name}</h1>
             <div className='flexboxEnd'>

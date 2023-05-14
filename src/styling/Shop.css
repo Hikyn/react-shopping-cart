@@ -12,7 +12,7 @@ div.Shop {
 
 @media only screen
 and (min-device-width: 800px)
-and (max-device-width: 1600px) {
+and (max-device-width: 1300px) {
     div.Shop {
         grid: 1fr 1fr 1fr/ 1fr 1fr 1fr;
     }
@@ -20,9 +20,13 @@ and (max-device-width: 1600px) {
 }
 
 @media only screen
-and (min-device-width: 1601px) {
+and (min-device-width: 1301px) {
     div.Shop {
-        grid: 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr;
+        grid: 1fr 1fr/ 1fr 1fr 1fr;
+    }
+
+    .Card {
+        min-height: 60vh;
     }
 
 }

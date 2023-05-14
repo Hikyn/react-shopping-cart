@@ -57,3 +57,9 @@ We use this:
 ```js
 render(<MemoryRouter><Shop /></MemoryRouter>);
 ```
+
+#### Deploying to gh-pages removed all images
+
+Reason: I changed "homepage" in package.json
+
+Solution: Change all image path to homepage/{previousPath}
