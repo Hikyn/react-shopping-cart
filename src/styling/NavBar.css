@@ -23,6 +23,11 @@ div.NavBar {
     box-shadow: -5px 5px 15px black;
 }
 
+div.NavBar a {
+    text-decoration: none;
+    color: inherit
+}
+
 div.NavBar a:visited {
     text-decoration: none;
     color: inherit;
