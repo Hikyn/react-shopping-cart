@@ -29,6 +29,17 @@ const Shop = () => {
         }
     }
 
+    function setPlantTotal(plant, quantity) {
+        if (quantity <= 0) {
+            return
+        }
+        if (!plantsInCart[plant.name]) {
+            setPlantsInCart({...plantsInCart, [plant.name]: {count: quantity, price: plant.price} })
+        } else {
+            setPlantsInCart({...plantsInCart, [plant.name]: {count: quantity, price: plant.price}})
+        }
+    }
+
     function decreasePlantFromTotal(plant) {{
         if (!plantsInCart[plant.name]) {
             return
@@ -56,7 +67,9 @@ const Shop = () => {
                         key={plant.name} 
                         plant={plant} 
                         addPlant={addPlantToTotal} 
-                        decreasePlant={decreasePlantFromTotal}/>)
+                        decreasePlant={decreasePlantFromTotal}
+                        setPlantTotal={setPlantTotal}
+                        />)
                 })}
             </div>
             <OrderTotal plantsInCart={plantsInCart}/>

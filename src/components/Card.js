@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styling/Card.css'
 
-const Card = ({ plant, addPlant, decreasePlant }) => {
+const Card = ({ plant, addPlant, decreasePlant, setPlantTotal }) => {
     const [count, setCount] = useState(0);
 
     function incrementCounter() {
@@ -23,6 +23,7 @@ const Card = ({ plant, addPlant, decreasePlant }) => {
         const value = Number(e.target.value);
         if (value >= 0) {
             setCount(e.target.value)
+            setPlantTotal(plant, value)
         }
     }
 
