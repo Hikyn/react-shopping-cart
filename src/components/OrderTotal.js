@@ -18,11 +18,11 @@ const OrderTotal = ({ plantsInCart }) => {
 
     useEffect(() => {
         calculateTotal()
-        console.log(`Total: ${total}`)
+        //console.log(`Total: ${total}`)
     }, [total, plantsInCart]);
 
     return (
-        <div className="OrderTotal">
+        <div role='footer' className="OrderTotal">
             Total({itemCount} items): {total}$
             <button>Checkout</button>
         </div>

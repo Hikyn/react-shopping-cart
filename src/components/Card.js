@@ -27,7 +27,7 @@ const Card = ({ plant, addPlant, decreasePlant }) => {
     }
 
     return (
-        <div className="Card" 
+        <article className="Card"
         style={{backgroundImage: `url("/images/${plant.name}.jpg")`}}
         >
             <h1 className='title'>{plant.name}</h1>
@@ -40,7 +40,7 @@ const Card = ({ plant, addPlant, decreasePlant }) => {
                 </div>
             </div>
             
-        </div>
+        </article>
         
     )
 }

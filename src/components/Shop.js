@@ -50,9 +50,10 @@ const Shop = () => {
     return (
         <div className='shopPage'>
             <Navbar />
-            <div className='Shop'>
+            <div className='Shop' role="main">
                 {plantList.map((plant) => {
-                    return (<Card key={plant.name} 
+                    return (<Card 
+                        key={plant.name} 
                         plant={plant} 
                         addPlant={addPlantToTotal} 
                         decreasePlant={decreasePlantFromTotal}/>)

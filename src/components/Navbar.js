@@ -4,7 +4,7 @@ import logo from '../images/plant.png'
 
 const Navbar = () => {
     return (
-        <div className="NavBar">
+        <div role="banner" className="NavBar">
             <Link className="Home" to="/">
                 <img className="logo" src={logo} alt="logo"/>
             </Link>
