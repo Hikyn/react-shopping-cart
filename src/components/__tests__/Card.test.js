@@ -4,7 +4,6 @@ import "@testing-library/jest-dom";  // optional
 import userEvent from "@testing-library/user-event";
 import Card from "../Card";
 import { plantFactory } from "../../plantFactory";
-import { shallow } from 'enzyme';
 import { act } from "react-dom/test-utils";
 
 describe("Card component", () => {
