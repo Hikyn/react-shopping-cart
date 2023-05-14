@@ -113,3 +113,4 @@ Solution: Change all image path to homepage/{previousPath}
 - View added items in cart
 - Search bar
 - Accessibility (after Advanced HTML on odin)
+- Product pages
