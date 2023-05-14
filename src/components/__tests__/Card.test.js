@@ -9,45 +9,32 @@ import { act } from "react-dom/test-utils";
 describe("Card component", () => {
     it("renders correct title", () => {
         const plant = plantFactory('Appletini', 25);
-        const addPlantToTotal = jest.fn();
-        const decreasePlantFromTotal = jest.fn();
         render(<Card 
             key={plant.name} 
             plant={plant}
-            addPlant={addPlantToTotal} 
-            decreasePlant={decreasePlantFromTotal}
         />);
         expect(screen.getByRole("heading", { level: 1 }).textContent).toMatch(/Appletini/i);
     });
 
     it("renders correct price", () => {
         const plant = plantFactory('Appletini', 25);
-        const addPlantToTotal = jest.fn();
-        const decreasePlantFromTotal = jest.fn();
         render(<Card 
             key={plant.name} 
             plant={plant}
-            addPlant={addPlantToTotal} 
-            decreasePlant={decreasePlantFromTotal}
         />);
         expect(screen.getByRole("heading", { level: 2 }).textContent).toMatch(/25/i);
     });
 
     it("renders default quantity", () => {
         const plant = plantFactory('Appletini', 25);
-        const addPlantToTotal = jest.fn();
-        const decreasePlantFromTotal = jest.fn();
         render(<Card 
             key={plant.name} 
             plant={plant}
-            addPlant={addPlantToTotal} 
-            decreasePlant={decreasePlantFromTotal}
         />);
         expect(screen.getByRole("spinbutton").value).toMatch(/0/i);
     });
 
     it("increases quantity", async () => {
-        const el = document.createElement("div");
         const user = userEvent.setup();
 
         const plant = plantFactory('Appletini', 25);
@@ -208,19 +195,21 @@ describe("Card component", () => {
         expect(decreasePlantFromTotal).toHaveBeenCalledTimes(3);
       });
 
-      it("calls decreasePlantFromTotal correct number of times", async () => {
+      it("manually inputing number calls setPlantTotal correct number of times", async () => {
         const user = userEvent.setup();
 
         const plant = plantFactory('Appletini', 25);
 
         const addPlantToTotal = jest.fn();
         const decreasePlantFromTotal = jest.fn();
+        const setPlantTotal = jest.fn();
         
         render(<Card 
             key={plant.name} 
             plant={plant}
             addPlant={addPlantToTotal} 
             decreasePlant={decreasePlantFromTotal}
+            setPlantTotal={setPlantTotal}
         />);
 
         const input = screen.getByRole("spinbutton");
@@ -229,6 +218,6 @@ describe("Card component", () => {
             await user.type(input, "126");
         })
     
-        expect(screen.getByRole("spinbutton").value).toMatch(/126/i);
+        expect(setPlantTotal).toHaveBeenCalledTimes(3);
       });
   });
