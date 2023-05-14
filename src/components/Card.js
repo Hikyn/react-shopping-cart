@@ -30,12 +30,12 @@ const Card = ({ plant, addPlant, decreasePlant }) => {
         <div className="Card" 
         style={{backgroundImage: `url("/images/${plant.name}.jpg")`}}
         >
-            <div className='title'>{plant.name}</div>
+            <h1 className='title'>{plant.name}</h1>
             <div className='flexboxEnd'>
-                <div className='price'>{plant.price}$</div>
+                <h2 className='price'>{plant.price}$</h2>
                 <div className='quantity'>
                     <button onClick={decrementCounter}>-</button>
-                    <input type="number" value={Number(count).toString()} onChange={setCounter}></input>
+                    <input name='quantity' type="number" value={Number(count).toString()} onChange={setCounter}></input>
                     <button onClick={incrementCounter}>+</button>
                 </div>
             </div>

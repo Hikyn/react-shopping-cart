@@ -12,6 +12,7 @@
 }
 
 .Card .title {
+    margin-top: 0px;
     color: white;
     min-height: 2rem;
     font-size: 1.2rem;
@@ -19,6 +20,8 @@
 }
 
 .Card .price {
+    margin-top: 0px;
+    margin-bottom: 0px;
     color: white;
     background-color: var(--TransparentBlack);
     text-align: end;
