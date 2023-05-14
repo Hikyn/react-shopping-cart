@@ -28,7 +28,7 @@
 
 # Live preview
 
-https://hikyn.github.io/react-shopping-cart/#/shop
+https://hikyn.github.io/react-shopping-cart/
 
 # Demo gif
 
