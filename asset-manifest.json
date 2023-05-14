@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-shopping-cart/static/css/main.a0d89154.css",
-    "main.js": "/react-shopping-cart/static/js/main.fbb8b672.js",
+    "main.css": "/react-shopping-cart/static/css/main.bc056053.css",
+    "main.js": "/react-shopping-cart/static/js/main.8176f444.js",
     "static/media/vecteezy_green-leaves-pattern_.jpg": "/react-shopping-cart/static/media/vecteezy_green-leaves-pattern_.499ca710d4e56fa7c886.jpg",
     "static/media/home.jpg": "/react-shopping-cart/static/media/home.0e2014c0016f9e4e5167.jpg",
     "static/media/plant.png": "/react-shopping-cart/static/media/plant.bf2ec0c224d3a326512f.png",
     "index.html": "/react-shopping-cart/index.html",
-    "main.a0d89154.css.map": "/react-shopping-cart/static/css/main.a0d89154.css.map",
-    "main.fbb8b672.js.map": "/react-shopping-cart/static/js/main.fbb8b672.js.map"
+    "main.bc056053.css.map": "/react-shopping-cart/static/css/main.bc056053.css.map",
+    "main.8176f444.js.map": "/react-shopping-cart/static/js/main.8176f444.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0d89154.css",
-    "static/js/main.fbb8b672.js"
+    "static/css/main.bc056053.css",
+    "static/js/main.8176f444.js"
   ]
 }
