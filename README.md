@@ -45,3 +45,15 @@ for(let i = 0; i < 5; i += 1) {
     })
 }
 ```
+
+#### Testing component with ```Link```
+
+Components that use Link needs to appear inside a router, so instead of this:
+```js
+render(<Shop />);
+```
+
+We use this:
+```js
+render(<MemoryRouter><Shop /></MemoryRouter>);
+```
