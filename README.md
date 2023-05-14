@@ -58,6 +58,7 @@ We use this:
 render(<MemoryRouter><Shop /></MemoryRouter>);
 ```
 
+### Deployment
 #### Deploying to gh-pages removed all images
 
 Reason: I changed "homepage" in package.json
