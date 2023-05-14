@@ -8,9 +8,9 @@ const Home = () => {
         <div className="homePage">
             <Navbar />
             <div className="Home">
-                <div className="title">Plants</div>
-                <div className="subtitle">for sale!</div>
-                <div className="description">Here you can find a variety of <b>plants in pots</b> for all your needs</div>
+                <h1 className="title">Plants</h1>
+                <h2 className="subtitle">for sale!</h2>
+                <article className="description">Here you can find a variety of <b>plants in pots</b> for all your needs</article>
                 <Link className="Shop" to="/shop">Start shopping</Link>
             </div>
         </div>
