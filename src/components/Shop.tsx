@@ -1,53 +1,65 @@
 import '../styling/Shop.css'
 import Navbar from "./Navbar";
-import { plantFactory } from '../plantFactory';
-import { useEffect, useState } from 'react';
-import Card from './Card';
+import { Plant } from '../plantFactory';
+import React, { useEffect, useState } from 'react';
 import OrderTotal from './OrderTotal';
+import Card from './Card';
+
+interface plantsInCart {
+    plantsInCart: Record<string, Item>;
+}
+
+interface Item {
+    count: number;
+    price: number;
+}
 
 const Shop = () => {
     const [plantsInCart, setPlantsInCart] = useState({});
-    const [plantList, setPlantList] = useState([
-        plantFactory('Appletini', 25),
-        plantFactory('Blue Corynephorus', 20),
-        plantFactory('Baby Cakes Blackberry', 15),
-        plantFactory('Violas', 10),
-        plantFactory('Profusion Red Zinnia', 13),
-        plantFactory('Purple Majesty Ornamental Millet', 12),
-        plantFactory('Jolt Pink Dianthus', 18),
-        plantFactory('Ornamental Peppers', 10),
-        plantFactory('‘Emerald Lace’ Plectranthus', 17),
-        plantFactory('Very Berry Creeping Wintergreen', 15),
+    const [plantList, setPlantList] = useState<Plant[]>([
+        new Plant('Appletini', 25),
+        new Plant('Blue Corynephorus', 20),
+        new Plant('Baby Cakes Blackberry', 15),
+        new Plant('Violas', 10),
+        new Plant('Profusion Red Zinnia', 13),
+        new Plant('Purple Majesty Ornamental Millet', 12),
+        new Plant('Jolt Pink Dianthus', 18),
+        new Plant('Ornamental Peppers', 10),
+        new Plant('‘Emerald Lace’ Plectranthus', 17),
+        new Plant('Very Berry Creeping Wintergreen', 15),
     ]);
 
-    function addPlantToTotal(plant) {
-        if (!plantsInCart[plant.name]) {
+    function addPlantToTotal(plant: Plant) {
+        const plantInCart: Item = plantsInCart[plant.name as keyof typeof plantsInCart];
+        if (!plantInCart) {
             setPlantsInCart({...plantsInCart, [plant.name]: {count: 1, price: plant.price} })
         } else {
-            const currentCount = plantsInCart[plant.name]['count'];
-            setPlantsInCart({...plantsInCart, [plant.name]: {count: currentCount + 1, price: plant.price}})
+            let currentCount = plantInCart['count' as keyof typeof plantInCart];
+            currentCount += 1;
+            setPlantsInCart({...plantsInCart, [plant.name]: {count: currentCount, price: plant.price}})
         }
     }
 
-    function setPlantTotal(plant, quantity) {
+    function setPlantTotal(plant: Plant, quantity: number) {
         if (quantity <= 0) {
             return
         }
-        if (!plantsInCart[plant.name]) {
+        if (!plantsInCart[plant.name as keyof typeof plantsInCart]) {
             setPlantsInCart({...plantsInCart, [plant.name]: {count: quantity, price: plant.price} })
         } else {
             setPlantsInCart({...plantsInCart, [plant.name]: {count: quantity, price: plant.price}})
         }
     }
 
-    function decreasePlantFromTotal(plant) {{
-        if (!plantsInCart[plant.name]) {
+    function decreasePlantFromTotal(plant: Plant) {{
+        const plantInCart: Item = plantsInCart[plant.name as keyof typeof plantsInCart]
+        if (!plantInCart) {
             return
         }
-        const currentCount = plantsInCart[plant.name]['count'];
+        const currentCount = plantInCart['count'];
         if (currentCount === 1) {
             const copyPlantsInCart = {...plantsInCart}
-            delete copyPlantsInCart[plant.name]
+            delete copyPlantsInCart[plant.name as keyof typeof plantsInCart]
             setPlantsInCart({...copyPlantsInCart})
         } else {
             setPlantsInCart({...plantsInCart, [plant.name]: {count: currentCount - 1, price: plant.price}})

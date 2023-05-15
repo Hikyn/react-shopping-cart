@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import '../styling/Home.css'
 import '../images/home.jpg'
 import Navbar from "./Navbar";
+import React from 'react';
 
 const Home = () => {
     return (

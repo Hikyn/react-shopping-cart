@@ -1,6 +1,7 @@
 import { Routes, Route, HashRouter } from "react-router-dom";
 import Home from "./Home";
 import Shop from "./Shop";
+import React from 'react';
 
 const RouteSwitch = () => {
   return (

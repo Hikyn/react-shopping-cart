@@ -1,7 +1,16 @@
 import { useState } from 'react';
-import '../styling/Card.css'
+import '../styling/Card.css';
+import { Plant } from '../plantFactory';
+import React from 'react';
 
-const Card = ({ plant, addPlant, decreasePlant, setPlantTotal }) => {
+interface Props {
+    plant: Plant;
+    addPlant: (plant: Plant) => void;
+    decreasePlant: (plant: Plant) => void;
+    setPlantTotal: (plant: Plant, quantity: number) => void;
+}
+
+const Card: React.FC<Props> = ({ plant, addPlant, decreasePlant, setPlantTotal }) => {
     const [count, setCount] = useState(0);
 
     function incrementCounter() {
@@ -19,11 +28,13 @@ const Card = ({ plant, addPlant, decreasePlant, setPlantTotal }) => {
         decreasePlant(plant);
     }
 
-    function setCounter(e) {
-        const value = Number(e.target.value);
+    function setCounter(e: React.ChangeEvent<HTMLInputElement>) {
+        if (!e.target) { return }
+        const element = e.target as HTMLInputElement;
+        const value = Number(element.value);
         if (value >= 0) {
-            setCount(e.target.value)
-            setPlantTotal(plant, value)
+            setCount(value);
+            setPlantTotal(plant, value);
         }
     }
 
@@ -36,7 +47,12 @@ const Card = ({ plant, addPlant, decreasePlant, setPlantTotal }) => {
                 <h2 className='price'>{plant.price}$</h2>
                 <div className='quantity'>
                     <button onClick={decrementCounter}>-</button>
-                    <input name='quantity' type="number" value={Number(count).toString()} onChange={setCounter}></input>
+                    <input 
+                        name='quantity' 
+                        type="number" 
+                        value={Number(count).toString()} 
+                        onChange={setCounter}>
+                    </input>
                     <button onClick={incrementCounter}>+</button>
                 </div>
             </div>
