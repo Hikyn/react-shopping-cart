@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-shopping-cart/static/css/main.529ab8c7.css",
-    "main.js": "/react-shopping-cart/static/js/main.2c677b2e.js",
-    "static/media/vecteezy_green-leaves-pattern_.jpg": "/react-shopping-cart/static/media/vecteezy_green-leaves-pattern_.499ca710d4e56fa7c886.jpg",
-    "static/media/home.jpg": "/react-shopping-cart/static/media/home.0e2014c0016f9e4e5167.jpg",
-    "static/media/plant.png": "/react-shopping-cart/static/media/plant.bf2ec0c224d3a326512f.png",
-    "index.html": "/react-shopping-cart/index.html",
-    "main.529ab8c7.css.map": "/react-shopping-cart/static/css/main.529ab8c7.css.map",
-    "main.2c677b2e.js.map": "/react-shopping-cart/static/js/main.2c677b2e.js.map"
+    "main.css": "/static/css/main.bc216785.css",
+    "main.js": "/static/js/main.1416e3c9.js",
+    "static/media/vecteezy_green-leaves-pattern_.jpg": "/static/media/vecteezy_green-leaves-pattern_.499ca710d4e56fa7c886.jpg",
+    "static/media/home.jpg": "/static/media/home.0e2014c0016f9e4e5167.jpg",
+    "static/media/plant.png": "/static/media/plant.bf2ec0c224d3a326512f.png",
+    "index.html": "/index.html",
+    "main.bc216785.css.map": "/static/css/main.bc216785.css.map",
+    "main.1416e3c9.js.map": "/static/js/main.1416e3c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.529ab8c7.css",
-    "static/js/main.2c677b2e.js"
+    "static/css/main.bc216785.css",
+    "static/js/main.1416e3c9.js"
   ]
 }
