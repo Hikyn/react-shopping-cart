@@ -117,6 +117,10 @@ Reason: I changed "homepage" in package.json
 
 Solution: Change all image path to homepage/{previousPath}
 
+### It was working fine on gh pages, but not on custom domain
+
+Solution: Changed homepage in package.json to custom domain
+
 # To improve
 - View added items in cart
 - Search bar
