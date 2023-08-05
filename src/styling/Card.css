@@ -1,51 +1,51 @@
 .Card {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: space-between;
-    border: 1px solid black;
-    height: 30vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: -5px 5px 15px black;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: -5px 5px 15px black;
 }
 
 .Card .title {
-    margin-top: 0px;
-    color: white;
-    min-height: 2rem;
-    font-size: 1.2rem;
-    background-color: var(--TransparentBlack);
+  margin-top: 0px;
+  color: white;
+  min-height: 2rem;
+  font-size: 1.2rem;
+  background-color: var(--TransparentBlack);
 }
 
 .Card .price {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: white;
-    background-color: var(--TransparentBlack);
-    text-align: end;
-    height: 2rem;
-    width: 100%;
-    font-size: 1.2rem;
-    align-self: flex-end;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: white;
+  background-color: var(--TransparentBlack);
+  text-align: end;
+  height: 2rem;
+  width: 100%;
+  font-size: 1.2rem;
+  align-self: flex-end;
 }
 
 .Card .flexboxEnd {
-    min-height: 3rem;
+  min-height: 3rem;
 }
 
 .Card .quantity {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
 }
 .Card button {
-    width: 100%;
-    min-height: 2rem;
+  width: 100%;
+  min-height: 2rem;
 }
 .Card input {
-    width: 5rem;
-    text-align: center;
+  width: 5rem;
+  text-align: center;
 }

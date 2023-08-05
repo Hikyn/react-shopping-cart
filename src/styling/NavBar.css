@@ -1,43 +1,42 @@
 .homePage div.NavBar {
-    position: fixed;
+  position: fixed;
 }
 
 .shopPage div.NavBar {
-    position: sticky;
-
+  position: sticky;
 }
 
 div.NavBar {
-    box-sizing: border-box;
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    justify-content: flex-start;
-    align-items: center;
-    color: white;
-    background-color: var(--TransparentBlack);
-    height: var(--NavBarSize);
-    width: 100%;
-    font-size: 1.5rem;
-    z-index: 1;
-    box-shadow: -5px 5px 15px black;
+  box-sizing: border-box;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  background-color: var(--TransparentBlack);
+  height: var(--NavBarSize);
+  width: 100%;
+  font-size: 1.5rem;
+  z-index: 1;
+  box-shadow: -5px 5px 15px black;
 }
 
 div.NavBar a {
-    text-decoration: none;
-    color: inherit
+  text-decoration: none;
+  color: inherit;
 }
 
 div.NavBar a:visited {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 div.NavBar a:hover {
-    color: orange;
+  color: orange;
 }
 
 div.NavBar .logo {
-    width: 2.5rem;
-    height: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }

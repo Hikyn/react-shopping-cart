@@ -1,42 +1,37 @@
 div.Shop {
-    display: grid;
-    width: 100vw;
-    grid: 30vh 30vh/ 40vw 40vw;
-    justify-content: space-around;
-    grid-auto-rows: 30vh;
-    gap: 1rem;
-    box-sizing: border-box;
-    padding: 1rem;
-    padding-bottom: calc(var(--OrderTotalHeight) + 1rem);
+  display: grid;
+  width: 100vw;
+  grid: 30vh 30vh/ 40vw 40vw;
+  justify-content: space-around;
+  grid-auto-rows: 30vh;
+  gap: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-bottom: calc(var(--OrderTotalHeight) + 1rem);
 }
 
-@media only screen
-and (min-device-width: 800px)
-and (max-device-width: 1300px) {
-    div.Shop {
-        grid: 1fr 1fr 1fr/ 1fr 1fr 1fr;
-    }
-
+@media only screen and (min-device-width: 800px) and (max-device-width: 1300px) {
+  div.Shop {
+    grid: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+  }
 }
 
-@media only screen
-and (min-device-width: 1301px) {
-    div.Shop {
-        grid: 1fr 1fr/ 1fr 1fr 1fr;
-    }
+@media only screen and (min-device-width: 1301px) {
+  div.Shop {
+    grid: 1fr 1fr/ 1fr 1fr 1fr;
+  }
 
-    .Card {
-        min-height: 60vh;
-    }
-
+  .Card {
+    min-height: 60vh;
+  }
 }
 
 div.Shop .empty {
-    padding-top: var(--NavBarSize);
+  padding-top: var(--NavBarSize);
 }
 
 div.shopPage {
-    background-image: url('../images/vecteezy_green-leaves-pattern_.jpg');
-    background-size: 35vh;
-    background-repeat: 2;
+  background-image: url("../images/vecteezy_green-leaves-pattern_.jpg");
+  background-size: 35vh;
+  background-repeat: 2;
 }
